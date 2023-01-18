@@ -20,4 +20,6 @@ def handle_message(message):
     )
     bot.send_message(chat_id=message.from_user.id, text=response['choices'][0]['text'])
 
-bot.polling()
+
+if __name__ == '__main__':
+    bot.polling()
