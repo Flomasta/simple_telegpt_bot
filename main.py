@@ -1,9 +1,9 @@
 import os
 import openai
 import telebot
-from dotenv import load_dotenv
 
-load_dotenv()
+
+
 openai.api_key = os.getenv("OPENAI_API_KEY")
 bot = telebot.TeleBot(os.getenv("WEBMAN_BOT"))
 
