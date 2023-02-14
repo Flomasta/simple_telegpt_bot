@@ -30,6 +30,7 @@ def handle_message(message):
         presence_penalty=0.0,
         stop=["You:"]
     )
+    reply_text = response.choices[0].text.strip()
     # Save the context for the next message
     bot.context[chat_id] += f"User: {user_message}\nChatGPT: {reply_text}\n"
 
